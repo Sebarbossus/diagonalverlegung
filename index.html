@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parkett</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="input-wrapper">
+            <h1>Diagonalverlegung</h1>
+            <input type="number" id="rl" placeholder="Raumlänge in m2" required>
+            <input type="number" id="rb" placeholder="Raumbreite in m2" required>
+            <input type="number" id="gfb" placeholder="gewünschte Friesbreite in mm" required>
+            <input type="number" id="pg" placeholder="Plattengrösse in mm" required>
+            <button id="outputBtn" class="btn">Rechnen</button>
+        </div>
+        <div id="output" class="output-wrapper none">
+            <div class="visible-output">
+                <div class="wrapper">
+                    <button class="collapsible">Masse</button>
+                    <div class="inner-wrapper none">
+                        <p>Der Raum ist insgesamt <span id="rg"></span> m<sup>2</sup></p>
+                        <p>Die Gesamtfläche der Platten beträgt <span id="pf"></span> m<sup>2</sup></p>
+                        <p>Die Friessfläche beträgt <span id="ff"></span> m<sup>2</sup></p>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <button class="collapsible">Platten</button>
+                    <div class="inner-wrapper none">
+                        <p>Die Diagonale von einer Platte beträgt <span id="dp"></span>mm</p>
+                        <p>Man braucht <span id="apl"></span> Platten in der Hälfte der Raumlänge</p>
+                        <p>Man braucht <span id="apb"></span> Platten in der Hälfte der Raumbreite</p>
+                        <p>Man braucht <span id="pa"></span> Platten insgesamt</p>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <button class="collapsible">Friess</button>
+                    <div class="inner-wrapper none">
+                        <p>Die Friessbreite in der Länge beträgt <span id="fbl"></span> mm</p>
+                        <p>Die Friessbreite in der Breite beträgt <span id="fbb"></span> mm</p>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <button class="collapsible">Schweißschnur</button>
+                    <div class="inner-wrapper none">
+                        <p>Die Schweißschnur zwischen den Platten beträgt <span id="sn"></span> lfdm.</p>
+                        <p>Die Schweißschnur zum Friess beträgt <span id="snf"></span> lfdm.</p>
+                        <p>Die gesamte Schweißschnur beträgt <span id="sng"></span> lfdm.</p>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <button class="collapsible">Verbrauch</button>
+                    <div class="inner-wrapper none">
+                        <p>Der Kleberverbrauch beträgt <span id="klv"></span> kg.</p>
+                        <p>Man braucht <span id="spm"></span> kg. Spachtelmasse</p>
+                        <p>Man braucht <span id="sps"></span> Säcke Spachtelmasse</p>
+                    </div>
+                </div>
+            </div>
+            <div class="invisible-output none">
+                <!-- Diese Berechnungen braucht man nicht anzuzeigen-->
+                <p>y1 ist <span id="y1"></span> m</p>
+                <p>y2 ist <span id="y2"></span> m</p>
+                <p>gfbm ist <span id="gfbm"></span> m</p>
+                <p>halbe Raumlänge <span id="hrl"></span> m<sup>2</sup></p>
+                <p>halbe Raumbreite <span id="hrb"></span> m<sup>2</sup></p>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

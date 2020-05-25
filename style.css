@@ -10,15 +10,27 @@ input::-webkit-input-placeholder {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+.input-wrapper {
+  margin-top: 30px;
+}
+
 .input-wrapper > * {
   margin: 10px auto 20px;
   padding: 10px;
   display: block;
   text-align: center;
-  min-width: 300px;
 }
 
-.btn {
+.input-wrapper > h1.title {
+  margin-bottom: 0!important;
+}
+
+.back {
+  margin-top: 30px;
+  margin-left: 40px;
+}
+
+.btn,  .back {
   padding: 20px;
   border-radius: 5px;
   background-color: #777;
@@ -26,10 +38,33 @@ input::-webkit-input-placeholder {
   font-size: 20px;
 }
 
-.btn:hover {
+.btn:hover, .hauptbtn:hover, .back:hover {
   background-color: #fff;
   color: #000;
   cursor: pointer;
+}
+
+.hauptbtn {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background: #777;
+  color: white;
+  cursor: pointer;
+  padding: 23px;
+  border: none;
+  font-size: 25px;
+  width: 100%;
+}
+
+.divp {
+  margin: 0 32vw;
+}
+
+.title {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .output-wrapper {
@@ -68,6 +103,34 @@ span {
   font-size: 25px;
 }
 
+.app-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.imgtext {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.imgl img {
+  width: 80%;
+  height: auto;
+  margin-left: 50px;
+}
+
+.diagLlist li {
+  text-align: center;
+}
+
+.inputdial {
+  margin-top: 150px;
+  float: right;
+}
+
 .collapsible:hover {
   background-color: #eee;
   color: #000;
@@ -88,11 +151,32 @@ span {
     }
 }
 
+@media (max-width: 720px) {
+  .divp {
+    margin: 0 2vw;
+  }
+}
+
 @media (max-width: 425px) {
   .wrapper {
     width: 300px;
   }
   .inner-wrapper {
     height: 200px;
+  }
+}
+
+@media(min-width: 1000px) {
+  .input-wrapper > h1.title {
+    margin-bottom: 30px!important;
+  }
+  .input-wrapper {
+    margin-top: 0;
+  }
+  .app-wrapper {
+    flex-direction: row;
+  }
+  .app-wrapper > * {
+    width: 50%;
   }
 }

@@ -1,0 +1,99 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagonalverlegung in L-Förmigem Raum</title>
+    <link rel="stylesheet" href="../Diagonalverlegung/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="input-wrapper">
+            <h1 class="title">Diagonalverlegung in L-Förmigem Raum</h1>
+        </div>
+        <div class="app-wrapper">
+            <div class="imgtext">
+                <div class="imgl">
+                    <img src="https://sebarbossus.github.io/diagonalverlegung/img/L_Raum.png">
+                </div>
+                <ul class="diagLlist">
+                    <li>W1: Längste waagerechte Wand</li>
+                    <li>W2: Nächste Wand parallel zu W1</li>
+                    <li>W3: Weiteste Wand parallel zu W1</li>
+                    <li>S1: Längste senkrechte Wand</li>
+                    <li>S2: Nächste Wand parallel zu S1</li>
+                    <li>S3: Weiteste Wand parallel zu S1</li>
+                </ul>
+            </div>
+            <div class="input-wrapper" id="inputdial">
+                <input type="number" id="w1" placeholder="W1 in m" required value="12.83">
+                <input type="number" id="w2" placeholder="W2 in m" required value="4">
+                <input type="number" id="w3" placeholder="W3 in m" required value="8.83">
+                <input type="number" id="s1" placeholder="S1 in m" required value="10.95">
+                <input type="number" id="s2" placeholder="S2 in m" required value="2">
+                <input type="number" id="s3" placeholder="S3 in m" required value="8.95">
+                <input type="number" id="gfb" placeholder="gewünschte Friesbreite in mm" required value="550">
+                <input type="number" id="pg" placeholder="Plattengrösse in mm" required value="400">
+                <button id="outputBtn" class="btn">Rechnen</button>
+            </div>
+        </div>
+        <div id="output" class="output-wrapper none">
+            <div class="visible-output">
+                <div class="wrapper">
+                    <button class="collapsible">Maße</button>
+                    <div class="inner-wrapper none">
+                        <p>Der Raum ist insgesamt <span id="rg"></span> m<sup>2</sup>.</p>
+                        <p>Die Plattenfläche beträgt <span id="pf"></span> m<sup>2</sup>.</p>
+                        <p>Die Friesfläche beträgt <span id="ff"></span> m<sup>2</sup>.</p>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <button class="collapsible">Platten</button>
+                    <div class="inner-wrapper none">
+                        <p>Die Plattendiagonale beträgt <span id="dp1"></span> mm.</p>
+                        <p>W1 und W2 haben jeweils <span id="pfw1"></span> Platten auf jeder Seite.</p>
+                        <p>W3 hat <span id="pfw3"></span> Platten auf jeder Seite.</p>
+                        <p>S1 und S2 haben jeweils <span id="pfs1"></span> Platten auf jeder Seite.</p>
+                        <p>S3 hat <span id="pfs3"></span> Platten auf jeder Seite.</p>
+                        <p>Es gibt insgesamt <span id="gpa"></span> Platten.</p>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <button class="collapsible">Friess</button>
+                    <div class="inner-wrapper none">
+                        <p>W1 und W2 haben jeweils eine Friesbreite von <span id="fw1"></span> mm.</p>
+                        <p>W3 hat eine Friesbreite von <span id="fw3"></span> mm.</p>
+                        <p>S1 und S2 haben jeweils eine Friesbreite von <span id="fs1"></span> mm.</p>
+                        <p>S3 hat eine Friesbreite von <span id="fs3"></span> mm.</p>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <button class="collapsible">Schweißschnur</button>
+                    <div class="inner-wrapper none">
+                        <p>Man braucht <span id="sn"></span> lfdm an Schweißschnur zwischen den Platten.</p>
+                        <p>Man braucht <span id="snf"></span> lfdm an Schweißschnur zwischen Fries und Platten.</p>
+                        <p>Man braucht <span id="sng"></span> lfdm an Schweißschnur insgesamt.</p>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <button class="collapsible">Verbrauch</button>
+                    <div class="inner-wrapper none">
+                        <p>Mit 5% Verschnitt braucht man <span id="fv"></span> m<sup>2</sup> Bodenbelag für den Fries.
+                        </p>
+                        <p>Man braucht <span id="klv"></span> kg Klever bei einen Verbrauch von 270g/m<sup>2</sup>.</p>
+                        <p>Man braucht <span id="spm"></span> kg Spachtelmasse (<span id="sps"></span> Säcke) bei einer
+                            Schichtdicke von 3mm und Verbrauch von 1,5kg/m<sup>2</sup> pro 1mm Schichtdicke.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="invisible-output none">
+                <!--   Diese Berechnungen braucht man nicht anzuzeigen-->
+
+            </div>
+        </div>
+    </div>
+    <script src="app2.js"></script>
+</body>
+
+</html>

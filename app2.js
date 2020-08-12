@@ -80,7 +80,7 @@ function rg() {
 }
 
 function pf() {
-    let pf = ((inputWert("pg") * inputWert("pg")) / 1000) * outputWert("gpa");
+    let pf = ((inputWert("pg") * inputWert("pg")) / 1000000) * outputWert("gpa");
     put("pf",pf);
     return pf;
 }

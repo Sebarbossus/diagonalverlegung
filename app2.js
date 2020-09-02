@@ -98,7 +98,7 @@ function fv() {
 }
 
 function sn() {
-  let sn = Math.round((inputWert("pg") / 500) * outputWert("gpa"));
+  let sn = Math.round((inputWert("pg") / 500) * outputWert("gpa") * 1000);
   put("sn", sn);
   return sn;
 }
